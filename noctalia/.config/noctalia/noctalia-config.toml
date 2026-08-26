@@ -2,6 +2,24 @@
 margin_ends = 0
 thickness = 32
 
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
@@ -15,11 +33,11 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
     box_width = 810.0
-    cx = 1536.0
-    cy = 1546.0
+    cx = 1280.0
+    cy = 1288.333251953125
     output = "HDMI-A-1"
-    placement_height = 1728.0
-    placement_width = 3072.0
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "login_box"
 
@@ -40,7 +58,12 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
         show_weather = true
 
 [shell]
+avatar_path = "/home/ktdawson/Pictures/icons/coffee2.jpg"
+polkit_agent = true
 telemetry_enabled = true
+
+    [shell.greeter_sync]
+    auto_sync = true
 
 [theme]
 builtin = "Tokyo-Night"

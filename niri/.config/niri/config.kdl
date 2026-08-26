@@ -6,6 +6,10 @@
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
+environment {
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+}
 input {
     keyboard {
         xkb {
@@ -269,6 +273,8 @@ layout {
 
 // This line starts noctalia, a commonly used shell for Wayland compositors.
 spawn-at-startup "noctalia"
+
+// spawn-sh-at-startup "dex run -a"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

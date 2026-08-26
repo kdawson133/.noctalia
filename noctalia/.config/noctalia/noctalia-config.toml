@@ -20,6 +20,9 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
     enabled = true
     timeout = 660.0
 
+[location]
+address = "caloundra"
+
 [lockscreen_widgets]
 enabled = false
 schema_version = 2

@@ -274,7 +274,7 @@ layout {
 // This line starts noctalia, a commonly used shell for Wayland compositors.
 spawn-at-startup "noctalia"
 
-// spawn-sh-at-startup "dex run -a"
+spawn-sh-at-startup "dex run -a"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -333,7 +333,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="ghostty"
+    match title="Ghostty"
     draw-border-with-background false
     default-column-width {
         proportion 0.5

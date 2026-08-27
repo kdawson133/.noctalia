@@ -2,6 +2,9 @@
 margin_ends = 0
 thickness = 32
 
+[brightness]
+enable_ddcutil = true
+
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 
